@@ -1,0 +1,12 @@
+!!! 5
+%html
+  %head
+    %title
+      Can I listen to?
+    %link{:rel => "stylesheet",
+      :href => "/telefunk.css"}
+    %script{:type => "text/javascript",
+      :src => "/require-jquery.js",
+      :"data-main" => '/listenable-main'}
+  %body
+    = yield

@@ -16,6 +16,7 @@ require(["jquery", "spin.min"], function($, spin) {
       top: 'auto', // Top position relative to parent in px
       left: 'auto' // Left position relative to parent in px
     };
+
     var spinner = new Spinner(opts);
 
     var start_spinner = function() {
@@ -71,7 +72,7 @@ require(["jquery", "spin.min"], function($, spin) {
       });
     };
 
-    $("input[type=submit]").click(search());
+    $("input[type=submit]").click(search);
     $("#artist").bind('keyup', function(e) {
       if(e.which === 13) {
         search();

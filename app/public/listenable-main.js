@@ -76,6 +76,8 @@ require(["jquery", "spin.min"], function($, spin) {
       if(e.which === 13) {
         search();
       }
+    }).bind('click', function() {
+      this.select();
     });
   });
 });

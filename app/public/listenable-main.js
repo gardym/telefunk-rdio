@@ -29,7 +29,7 @@ require(["jquery", "spin.min"], function($, spin) {
     };
 
     var rdio_url = "http://www.rdio.com";
-    $("input[type=submit]").click(function() {
+    var search = function() {
       $(".output").empty();
       start_spinner();
       $.get("/listenable/search", { query: $("#artist").val() }, function(data) {
@@ -69,6 +69,13 @@ require(["jquery", "spin.min"], function($, spin) {
           $(".output").append("<div class='spacer'></div>");
         });
       });
+    };
+
+    $("input[type=submit]").click(search());
+    $("#artist").bind('keyup', function(e) {
+      if(e.which === 13) {
+        search();
+      }
     });
   });
 });

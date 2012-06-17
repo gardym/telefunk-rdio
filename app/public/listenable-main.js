@@ -62,7 +62,7 @@ require(["jquery", "spin.min"], function($, spin) {
             var album_img = $("<img src='" + album.icon + "' />");
             album_li.append(album_img);
 
-            var album_span = $("<span>" + album.name + " (Streamable? " + album.canStream + ")</span>");
+            var album_span = $("<span>" + album.name + "</span>");
             album_li.append(album_span);
 
             album_ul.append(album_li);
